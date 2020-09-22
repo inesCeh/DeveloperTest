@@ -10,12 +10,33 @@
 		33A531B81E884FC31A5D8C6D /* Pods_DeveloperTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F829F16C523C113C7DDBA23 /* Pods_DeveloperTest.framework */; };
 		598B8A8925135A4E0030C055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B8A8825135A4E0030C055 /* AppDelegate.swift */; };
 		598B8A8B25135A4E0030C055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B8A8A25135A4E0030C055 /* SceneDelegate.swift */; };
-		598B8A8D25135A4E0030C055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B8A8C25135A4E0030C055 /* ViewController.swift */; };
 		598B8A9225135A500030C055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598B8A9125135A500030C055 /* Assets.xcassets */; };
 		598B8A9525135A500030C055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598B8A9325135A500030C055 /* LaunchScreen.storyboard */; };
 		598B8AA025135A500030C055 /* DeveloperTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B8A9F25135A500030C055 /* DeveloperTestTests.swift */; };
 		598B8AAB25135A500030C055 /* DeveloperTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B8AAA25135A500030C055 /* DeveloperTestUITests.swift */; };
 		598B8ABD251364BA0030C055 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598B8ABF251364BA0030C055 /* Localizable.strings */; };
+		59E10448251A100A00E071AD /* SF Pro Display Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59E10444251A100A00E071AD /* SF Pro Display Bold.ttf */; };
+		59E10449251A100A00E071AD /* SF Pro Text Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59E10445251A100A00E071AD /* SF Pro Text Medium.ttf */; };
+		59E1044A251A100A00E071AD /* SF Pro Text Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59E10446251A100A00E071AD /* SF Pro Text Bold.ttf */; };
+		59E1044B251A100A00E071AD /* SF Pro Text Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59E10447251A100A00E071AD /* SF Pro Text Regular.ttf */; };
+		59E10455251A105100E071AD /* SchoolDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10450251A105100E071AD /* SchoolDetails.swift */; };
+		59E10456251A105100E071AD /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10451251A105100E071AD /* Teacher.swift */; };
+		59E10457251A105100E071AD /* StudentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10452251A105100E071AD /* StudentDetails.swift */; };
+		59E10458251A105100E071AD /* TeacherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10453251A105100E071AD /* TeacherDetails.swift */; };
+		59E10459251A105100E071AD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10454251A105100E071AD /* Student.swift */; };
+		59E1046E251A116E00E071AD /* DeveloperTestColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E1046D251A116E00E071AD /* DeveloperTestColors.xcassets */; };
+		59E10473251A11B100E071AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10472251A11B100E071AD /* Utils.swift */; };
+		59E10485251A12B900E071AD /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E1047B251A12B900E071AD /* StudentsViewController.swift */; };
+		59E10486251A12B900E071AD /* TeachersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E1047C251A12B900E071AD /* TeachersTableViewCell.swift */; };
+		59E10487251A12B900E071AD /* TeachersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E1047D251A12B900E071AD /* TeachersViewController.xib */; };
+		59E10488251A12B900E071AD /* StudentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E1047E251A12B900E071AD /* StudentsTableViewCell.xib */; };
+		59E10489251A12B900E071AD /* StudentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E1047F251A12B900E071AD /* StudentsViewController.xib */; };
+		59E1048A251A12B900E071AD /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10480251A12B900E071AD /* TeachersViewController.swift */; };
+		59E1048B251A12B900E071AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10481251A12B900E071AD /* MainViewController.swift */; };
+		59E1048C251A12B900E071AD /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10482251A12B900E071AD /* StudentsTableViewCell.swift */; };
+		59E1048D251A12B900E071AD /* TeachersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E10483251A12B900E071AD /* TeachersTableViewCell.xib */; };
+		59E1048E251A12B900E071AD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E10484251A12B900E071AD /* MainViewController.xib */; };
+		59E10493251A12F100E071AD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E10492251A12F100E071AD /* UIColorExtension.swift */; };
 		A7313B7F7B473FEDE92E6817 /* Pods_DeveloperTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C4B915889DE6CED0DEE01 /* Pods_DeveloperTestTests.framework */; };
 		EBCFA7D5DC6A1E6BAA1116F5 /* Pods_DeveloperTest_DeveloperTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED981198FB0C9307B4188494 /* Pods_DeveloperTest_DeveloperTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +64,6 @@
 		598B8A8525135A4E0030C055 /* DeveloperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598B8A8825135A4E0030C055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598B8A8A25135A4E0030C055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		598B8A8C25135A4E0030C055 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		598B8A9125135A500030C055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598B8A9425135A500030C055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598B8A9625135A500030C055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +75,28 @@
 		598B8AAC25135A500030C055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598B8ABE251364BA0030C055 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		598B8AC0251364CB0030C055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59E10444251A100A00E071AD /* SF Pro Display Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display Bold.ttf"; sourceTree = "<group>"; };
+		59E10445251A100A00E071AD /* SF Pro Text Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Text Medium.ttf"; sourceTree = "<group>"; };
+		59E10446251A100A00E071AD /* SF Pro Text Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Text Bold.ttf"; sourceTree = "<group>"; };
+		59E10447251A100A00E071AD /* SF Pro Text Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Text Regular.ttf"; sourceTree = "<group>"; };
+		59E10450251A105100E071AD /* SchoolDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDetails.swift; sourceTree = "<group>"; };
+		59E10451251A105100E071AD /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		59E10452251A105100E071AD /* StudentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetails.swift; sourceTree = "<group>"; };
+		59E10453251A105100E071AD /* TeacherDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDetails.swift; sourceTree = "<group>"; };
+		59E10454251A105100E071AD /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		59E1046D251A116E00E071AD /* DeveloperTestColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DeveloperTestColors.xcassets; sourceTree = "<group>"; };
+		59E10472251A11B100E071AD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		59E1047B251A12B900E071AD /* StudentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		59E1047C251A12B900E071AD /* TeachersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeachersTableViewCell.swift; sourceTree = "<group>"; };
+		59E1047D251A12B900E071AD /* TeachersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachersViewController.xib; sourceTree = "<group>"; };
+		59E1047E251A12B900E071AD /* StudentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentsTableViewCell.xib; sourceTree = "<group>"; };
+		59E1047F251A12B900E071AD /* StudentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentsViewController.xib; sourceTree = "<group>"; };
+		59E10480251A12B900E071AD /* TeachersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		59E10481251A12B900E071AD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		59E10482251A12B900E071AD /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
+		59E10483251A12B900E071AD /* TeachersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachersTableViewCell.xib; sourceTree = "<group>"; };
+		59E10484251A12B900E071AD /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		59E10492251A12F100E071AD /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		799CCFEC57A54E6A505A3F87 /* Pods-DeveloperTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperTestTests.release.xcconfig"; path = "Target Support Files/Pods-DeveloperTestTests/Pods-DeveloperTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E7D3710F8D304218A89F015 /* Pods-DeveloperTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DeveloperTestTests/Pods-DeveloperTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F829F16C523C113C7DDBA23 /* Pods_DeveloperTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeveloperTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,13 +169,18 @@
 		598B8A8725135A4E0030C055 /* DeveloperTest */ = {
 			isa = PBXGroup;
 			children = (
+				59E10477251A123300E071AD /* UserInterface */,
+				59E1044F251A102000E071AD /* Networking */,
+				59E10443251A0FB800E071AD /* Fonts */,
 				598B8AB8251363190030C055 /* Localization */,
 				598B8A8825135A4E0030C055 /* AppDelegate.swift */,
 				598B8A8A25135A4E0030C055 /* SceneDelegate.swift */,
-				598B8A8C25135A4E0030C055 /* ViewController.swift */,
 				598B8A9125135A500030C055 /* Assets.xcassets */,
 				598B8A9325135A500030C055 /* LaunchScreen.storyboard */,
 				598B8A9625135A500030C055 /* Info.plist */,
+				59E1046D251A116E00E071AD /* DeveloperTestColors.xcassets */,
+				59E10492251A12F100E071AD /* UIColorExtension.swift */,
+				59E10472251A11B100E071AD /* Utils.swift */,
 			);
 			path = DeveloperTest;
 			sourceTree = "<group>";
@@ -162,6 +209,46 @@
 				598B8ABF251364BA0030C055 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		59E10443251A0FB800E071AD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				59E10444251A100A00E071AD /* SF Pro Display Bold.ttf */,
+				59E10446251A100A00E071AD /* SF Pro Text Bold.ttf */,
+				59E10445251A100A00E071AD /* SF Pro Text Medium.ttf */,
+				59E10447251A100A00E071AD /* SF Pro Text Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		59E1044F251A102000E071AD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				59E10450251A105100E071AD /* SchoolDetails.swift */,
+				59E10454251A105100E071AD /* Student.swift */,
+				59E10452251A105100E071AD /* StudentDetails.swift */,
+				59E10451251A105100E071AD /* Teacher.swift */,
+				59E10453251A105100E071AD /* TeacherDetails.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		59E10477251A123300E071AD /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				59E10481251A12B900E071AD /* MainViewController.swift */,
+				59E10484251A12B900E071AD /* MainViewController.xib */,
+				59E10482251A12B900E071AD /* StudentsTableViewCell.swift */,
+				59E1047E251A12B900E071AD /* StudentsTableViewCell.xib */,
+				59E1047B251A12B900E071AD /* StudentsViewController.swift */,
+				59E1047F251A12B900E071AD /* StudentsViewController.xib */,
+				59E1047C251A12B900E071AD /* TeachersTableViewCell.swift */,
+				59E10483251A12B900E071AD /* TeachersTableViewCell.xib */,
+				59E10480251A12B900E071AD /* TeachersViewController.swift */,
+				59E1047D251A12B900E071AD /* TeachersViewController.xib */,
+			);
+			path = UserInterface;
 			sourceTree = "<group>";
 		};
 		B9E41EA8E8C0A07F75CFA7EB /* Pods */ = {
@@ -287,9 +374,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E1048D251A12B900E071AD /* TeachersTableViewCell.xib in Resources */,
+				59E1048E251A12B900E071AD /* MainViewController.xib in Resources */,
+				59E10489251A12B900E071AD /* StudentsViewController.xib in Resources */,
+				59E1044B251A100A00E071AD /* SF Pro Text Regular.ttf in Resources */,
+				59E10448251A100A00E071AD /* SF Pro Display Bold.ttf in Resources */,
+				59E10487251A12B900E071AD /* TeachersViewController.xib in Resources */,
+				59E1046E251A116E00E071AD /* DeveloperTestColors.xcassets in Resources */,
 				598B8A9525135A500030C055 /* LaunchScreen.storyboard in Resources */,
 				598B8ABD251364BA0030C055 /* Localizable.strings in Resources */,
 				598B8A9225135A500030C055 /* Assets.xcassets in Resources */,
+				59E1044A251A100A00E071AD /* SF Pro Text Bold.ttf in Resources */,
+				59E10449251A100A00E071AD /* SF Pro Text Medium.ttf in Resources */,
+				59E10488251A12B900E071AD /* StudentsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +514,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598B8A8D25135A4E0030C055 /* ViewController.swift in Sources */,
+				59E10455251A105100E071AD /* SchoolDetails.swift in Sources */,
+				59E1048B251A12B900E071AD /* MainViewController.swift in Sources */,
+				59E10493251A12F100E071AD /* UIColorExtension.swift in Sources */,
+				59E10456251A105100E071AD /* Teacher.swift in Sources */,
+				59E10458251A105100E071AD /* TeacherDetails.swift in Sources */,
+				59E10457251A105100E071AD /* StudentDetails.swift in Sources */,
+				59E1048A251A12B900E071AD /* TeachersViewController.swift in Sources */,
 				598B8A8925135A4E0030C055 /* AppDelegate.swift in Sources */,
 				598B8A8B25135A4E0030C055 /* SceneDelegate.swift in Sources */,
+				59E1048C251A12B900E071AD /* StudentsTableViewCell.swift in Sources */,
+				59E10459251A105100E071AD /* Student.swift in Sources */,
+				59E10485251A12B900E071AD /* StudentsViewController.swift in Sources */,
+				59E10486251A12B900E071AD /* TeachersTableViewCell.swift in Sources */,
+				59E10473251A11B100E071AD /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

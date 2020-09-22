@@ -5,4 +5,23 @@
   Created by Ines Ceh on 17/09/2020.
   Copyright © 2020 Ines Ceh. All rights reserved.
 */
-"main_title_teachers" = "Enseignants";
+
+/* Title for tab Teachers*/
+"main_teachers" = "Enseignants";
+/* Title for tab Students */
+"main_students" = "Étudiants";
+
+/* Titles for cells data */
+"cell_data_class" = "Classe";
+"cell_data_school" = "École";
+"cell_data_grade" = "Classe";
+
+/* Title for Contact dialog */
+"teachers_contact" = "Contact";
+/* Titles for Contact dialog options */
+"teachers_email" = "Email";
+"teachers_message" = "Message";
+"teachers_call" = "Appel";
+
+/* Cancel action */
+"common_action_cancel" = "Annuler";
