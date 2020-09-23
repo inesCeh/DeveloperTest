@@ -267,6 +267,7 @@
 			children = (
 				59E10450251A105100E071AD /* SchoolDetails.swift */,
 				59E10454251A105100E071AD /* Student.swift */,
+				59E10482251A12B900E071AD /* StudentsTableViewCell.swift */,
 				59E10452251A105100E071AD /* StudentDetails.swift */,
 				59E10451251A105100E071AD /* Teacher.swift */,
 				59E10453251A105100E071AD /* TeacherDetails.swift */,
@@ -279,7 +280,6 @@
 			children = (
 				59E10481251A12B900E071AD /* MainViewController.swift */,
 				59E10484251A12B900E071AD /* MainViewController.xib */,
-				59E10482251A12B900E071AD /* StudentsTableViewCell.swift */,
 				59E1047E251A12B900E071AD /* StudentsTableViewCell.xib */,
 				59E1047B251A12B900E071AD /* StudentsViewController.swift */,
 				59E1047F251A12B900E071AD /* StudentsViewController.xib */,
@@ -963,7 +963,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3EF5BB29CF7E77F6E51F1E6 /* Pods-DeveloperTest.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DeveloperTest_Dev.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -982,7 +982,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2E2B04ABCC657CAC35E529A /* Pods-DeveloperTest.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DeveloperTest_Dev.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
