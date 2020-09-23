@@ -27,7 +27,7 @@ class StudentsViewController: UIViewController {
         
         activityView.style = .large
         createTable()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("common_pull_to_refresh", comment: ""))
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         studentsTableView.addSubview(refreshControl)
         studentsTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
@@ -48,8 +48,27 @@ class StudentsViewController: UIViewController {
         studentsTableView.dataSource = self
     }
     
+    func showError(message: String) {
+        
+        let alertController = UIAlertController(title: NSLocalizedString("error_title", comment: ""), message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: NSLocalizedString("common_action_Ok", comment: ""), style: UIAlertAction.Style.default) {
+            UIAlertAction in
+            
+                self.refreshControl.endRefreshing()
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.studentsTableView.contentOffset = CGPoint.zero
+                })
+        }
+
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
     @objc func refresh(_ sender: Any) {
+        
         fetchStudents()
+        self.refreshControl.endRefreshing()
     }
 }
 
@@ -76,7 +95,7 @@ extension StudentsViewController: UITableViewDataSource {
         cell.nameLabel.text = student.name
         cell.gradeLabel.text = NSLocalizedString("cell_data_grade", comment: "") + ": " + String(student.grade)
         let schoolId = student.school_id
-        getSchoolName(schoolId: schoolId, schoolLabel: cell.schoolLabel)
+        Utils.getSchoolName(schoolId: schoolId, schoolLabel: cell.schoolLabel)
     
         return cell;
     }
@@ -96,46 +115,13 @@ extension StudentsViewController {
                 guard let students = response.value else { return }
                 self.studentsList = students
                 self.studentsTableView.reloadData()
-                self.activityView.stopAnimating()
-                self.activityView.isHidden = true
-                self.refreshControl.endRefreshing()
             case .failure(let error):
-                print(self.getErrorMessage(error: error))
+                print(Utils.getErrorMessage(error: error))
+                self.showError(message: Utils.getErrorMessage(error: error))
             }
+            self.activityView.stopAnimating()
+            self.activityView.isHidden = true
         }
-    }
-    
-    func getSchoolName(schoolId: Int, schoolLabel: UILabel) {
-        
-        AF.request("https://zpk2uivb1i.execute-api.us-east-1.amazonaws.com/dev/schools/\(schoolId)").validate(statusCode: 200..<600)
-            .responseDecodable(of: SchoolDetails.self) { response in
-          
-                switch response.result {
-                case .success:
-                    guard let schoolsDetails = response.value else { return }
-                    schoolLabel.text = NSLocalizedString("cell_data_school", comment: "") + ": " + schoolsDetails.name
-                case .failure(let error):
-                    print(self.getErrorMessage(error: error))
-                }
-            }
-    }
-    
-    func getErrorMessage(error: AFError) -> String{
-        
-        var errorMessage = ""
-        if let underlyingError = error.underlyingError {
-            if let urlError = underlyingError as? URLError {
-                switch urlError.code {
-                case .timedOut:
-                    errorMessage = "Timed out error"
-                case .notConnectedToInternet:
-                    errorMessage = "Not connected"
-                default:
-                    errorMessage = "Unmanaged error"
-                }
-            }
-        }
-        return errorMessage
     }
 }
 

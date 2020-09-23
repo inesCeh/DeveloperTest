@@ -18,7 +18,7 @@ class TeachersViewController: UIViewController {
     var teachersList: [Teacher] = []
     private let tableCellIdentifier = "teachersTableViewCell"
     private var refreshControl = UIRefreshControl()
-    
+    private var isFirstTime = true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +28,7 @@ class TeachersViewController: UIViewController {
         
         activityView.style = .large
         createTable()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("common_pull_to_refresh", comment: ""))
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         teachersTableView.addSubview(refreshControl)
         teachersTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
@@ -49,8 +49,28 @@ class TeachersViewController: UIViewController {
         teachersTableView.dataSource = self
     }
     
+    func showError(message: String) {
+        
+        let alertController = UIAlertController(title: NSLocalizedString("error_title", comment: ""), message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: NSLocalizedString("common_action_Ok", comment: ""), style: UIAlertAction.Style.default) {
+            UIAlertAction in
+            
+                self.refreshControl.endRefreshing()
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.teachersTableView.contentOffset = CGPoint.zero
+                })
+        }
+
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @objc func refresh(_ sender: Any) {
+        
         fetchTeachers()
+        self.refreshControl.endRefreshing()
     }
 }
 
@@ -79,7 +99,7 @@ extension TeachersViewController: UITableViewDataSource {
         cell.nameLabel.text = teacher.name
         cell.classLabel.text = NSLocalizedString("cell_data_class", comment: "") + ": " +  teacher.className
         let schoolId = teacher.school_id
-        getSchoolName(schoolId: schoolId, schoolLabel: cell.schoolLabel)
+        Utils.getSchoolName(schoolId: schoolId, schoolLabel: cell.schoolLabel)
         getImage(image_url: teacher.image_url, image_view: cell.teacherImageView)
         
         return cell;
@@ -97,19 +117,19 @@ extension TeachersViewController: TeachersTableViewCellDelegate {
         let messageAttrString = NSMutableAttributedString(string: "Message Here", attributes: messageFont as [NSAttributedString.Key : Any])
         optionMenu.setValue(messageAttrString, forKey: "attributedMessage")
         
+        let attributedTextEmail = getNSMuttableAttributtedString(title: NSLocalizedString("teachers_email", comment: ""))
         let emailAction = UIAlertAction(title: NSLocalizedString("teachers_email", comment: ""), style: .default, handler:{ (UIAlertAction)in
         })
-        let attributedTextEmail = NSMutableAttributedString(string: NSLocalizedString("teachers_email", comment: ""))
-        let range = NSRange(location: 0, length: attributedTextEmail.length)
-        attributedTextEmail.addAttribute(NSAttributedString.Key.kern, value: -0.41, range: range)
-        attributedTextEmail.addAttribute(NSAttributedString.Key.font, value: UIFont(name: "SFProText-Regular", size: 17.0)!, range: range)
 
-        
+        let attributedTextMessage = getNSMuttableAttributtedString(title: NSLocalizedString("teachers_message", comment: ""))
         let messageAction = UIAlertAction(title: NSLocalizedString("teachers_message", comment: ""), style: .default, handler:{ (UIAlertAction)in
         })
+        
+        let attributedTextCall = getNSMuttableAttributtedString(title: NSLocalizedString("teachers_call", comment: ""))
         let callAction = UIAlertAction(title: NSLocalizedString("teachers_call", comment: ""), style: .default, handler:{ (UIAlertAction)in
         })
             
+        let attributedTextCancel = getNSMuttableAttributtedString(title: NSLocalizedString("common_action_cancel", comment: ""))
         let cancelAction = UIAlertAction(title: NSLocalizedString("common_action_cancel", comment: ""), style: .cancel)
         
         optionMenu.addAction(emailAction)
@@ -117,12 +137,26 @@ extension TeachersViewController: TeachersTableViewCellDelegate {
         optionMenu.addAction(callAction)
         optionMenu.addAction(cancelAction)
         
-        //optionMenu.view.tintColor = alertControllerTintColor
+        optionMenu.view.tintColor = UIColor.alertControllerTintColor
             
         self.present(optionMenu, animated: true, completion: nil)
     
         guard let labelEmail = (emailAction.value(forKey: "__representer")as? NSObject)?.value(forKey: "label") as? UILabel else { return }
         labelEmail.attributedText = attributedTextEmail
+        guard let labelMessage = (messageAction.value(forKey: "__representer")as? NSObject)?.value(forKey: "label") as? UILabel else { return }
+        labelMessage.attributedText = attributedTextMessage
+        guard let labelCall = (callAction.value(forKey: "__representer")as? NSObject)?.value(forKey: "label") as? UILabel else { return }
+        labelCall.attributedText = attributedTextCall
+        guard let labelCancel = (cancelAction.value(forKey: "__representer")as? NSObject)?.value(forKey: "label") as? UILabel else { return }
+        labelCancel.attributedText = attributedTextCancel
+    }
+    
+    func getNSMuttableAttributtedString(title: String) -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: title)
+        let range = NSRange(location: 0, length: attributedText.length)
+        attributedText.addAttribute(NSAttributedString.Key.kern, value: -0.41, range: range)
+        attributedText.addAttribute(NSAttributedString.Key.font, value: UIFont(name: "SFProText-Regular", size: 17.0) ?? UIFont.systemFont(ofSize: 17), range: range)
+        return attributedText
     }
 }
 
@@ -131,8 +165,10 @@ extension TeachersViewController {
   
     func fetchTeachers() {
 
-        activityView.isHidden = false
-        activityView.startAnimating()
+        if (isFirstTime)
+        {
+            activityView.startAnimating()
+        }
         AF.request("https://zpk2uivb1i.execute-api.us-east-1.amazonaws.com/dev/teachers")
             .validate()
             .responseDecodable(of: [Teacher].self) { (response) in
@@ -143,45 +179,15 @@ extension TeachersViewController {
                     self.teachersList = teachers
                     self.teachersTableView.reloadData()
                 case .failure(let error):
-                    print(self.getErrorMessage(error: error))
+                    self.showError(message: Utils.getErrorMessage(error: error))
                 }
-                self.activityView.stopAnimating()
-                self.activityView.isHidden = true
-                self.refreshControl.endRefreshing()
+                if(self.isFirstTime)
+                {
+                    self.activityView.stopAnimating()
+                    self.activityView.isHidden = true
+                    self.isFirstTime = false
+                }
         }
-    }
-    
-    func getSchoolName(schoolId: Int, schoolLabel: UILabel) {
-        
-        AF.request("https://zpk2uivb1i.execute-api.us-east-1.amazonaws.com/dev/schools/\(schoolId)").validate(statusCode: 200..<600)
-            .responseDecodable(of: SchoolDetails.self) { response in
-          
-                switch response.result {
-                case .success:
-                    guard let schoolsDetails = response.value else { return }
-                    schoolLabel.text = NSLocalizedString("cell_data_school", comment: "") + ": " + schoolsDetails.name
-                case .failure(let error):
-                    print(self.getErrorMessage(error: error))
-                }
-            }
-    }
-    
-    func getErrorMessage(error: AFError) -> String{
-        
-        var errorMessage = ""
-        if let underlyingError = error.underlyingError {
-            if let urlError = underlyingError as? URLError {
-                switch urlError.code {
-                case .timedOut:
-                    errorMessage = "Timed out error"
-                case .notConnectedToInternet:
-                    errorMessage = "Not connected"
-                default:
-                    errorMessage = "Unmanaged error"
-                }
-            }
-        }
-        return errorMessage
     }
 }
 

@@ -25,3 +25,14 @@
 
 /* Cancel action */
 "common_action_cancel" = "Annuler";
+/* Ok action */
+"common_action_Ok" = "D'accord";
+
+/* Title for Pull to refresh action */
+"common_pull_to_refresh" = "Tirer pour rafraîchir";
+
+/* Title for error */
+"error_title" = "Erreur";
+"error_timed_out" = "Erreur de temporisation";
+"error_not_connected" = "Pas connecté";
+"error_unmanaged_error" = "Erreur non gérée";

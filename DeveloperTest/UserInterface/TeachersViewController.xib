@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeachersViewController" customModule="DeveloperTest" customModuleProvider="target">
             <connections>
-                <outlet property="activityView" destination="IMh-bo-0kA" id="Gd9-9W-TLf"/>
+                <outlet property="activityView" destination="9fJ-gM-5Bf" id="pbc-C8-n2H"/>
                 <outlet property="teachersTableView" destination="E5u-t3-39u" id="suw-jI-LF6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,25 +21,25 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-bo-0kA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </activityIndicatorView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-t3-39u">
                     <rect key="frame" x="0.0" y="16" width="375" height="651"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9fJ-gM-5Bf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="IMh-bo-0kA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="848-Fd-TT0"/>
-                <constraint firstItem="IMh-bo-0kA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="87M-4P-D7R"/>
-                <constraint firstItem="E5u-t3-39u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="9rF-1h-AkX"/>
-                <constraint firstItem="E5u-t3-39u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hgw-48-EBV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="E5u-t3-39u" secondAttribute="bottom" id="S11-hw-edk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E5u-t3-39u" secondAttribute="trailing" id="e4O-Y4-lhD"/>
-                <constraint firstItem="IMh-bo-0kA" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jNy-Te-0cL"/>
-                <constraint firstItem="IMh-bo-0kA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kjP-PR-Mim"/>
+                <constraint firstItem="E5u-t3-39u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="7FW-zS-3lj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9fJ-gM-5Bf" secondAttribute="trailing" id="GzA-S9-Xu3"/>
+                <constraint firstItem="E5u-t3-39u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aoz-dN-NQU"/>
+                <constraint firstItem="E5u-t3-39u" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nxB-rm-pJg"/>
+                <constraint firstItem="E5u-t3-39u" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="owS-ka-7fv"/>
+                <constraint firstItem="9fJ-gM-5Bf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qIY-hW-XZY"/>
+                <constraint firstItem="9fJ-gM-5Bf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="v8x-ri-9Ss"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9fJ-gM-5Bf" secondAttribute="bottom" id="yEA-Co-lqf"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="127.28635682158921"/>
         </view>

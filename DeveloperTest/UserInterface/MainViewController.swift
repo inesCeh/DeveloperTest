@@ -23,11 +23,18 @@ class MainViewController: UITabBarController {
         createTabBar()
     }
 
-        
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         createNavigationController()
         self.viewControllers = [teachersViewConttoller, studentsViewController]
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        navigationItem.largeTitleDisplayMode = .always
+        coordinator.animate(alongsideTransition: { (_) in
+            self.navigationController?.navigationBar.sizeToFit()
+        }, completion: nil)
     }
     
     internal func createTabBar() {
@@ -55,10 +62,18 @@ class MainViewController: UITabBarController {
         
         let textAttributes = [NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Bold", size: 34)!, NSAttributedString.Key.foregroundColor:UIColor.navigationTitleColor ?? UIColor.black, NSAttributedString.Key.kern: 0.37] as [NSAttributedString.Key : Any]
         self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
-        //self.navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = NSLocalizedString("main_teachers", comment: "")
         
+        setNavigationTitleTeachers()
+    }
+    
+    func setNavigationTitleTeachers() {
+        
+        #if DEV
+            self.title = NSLocalizedString("main_teachers", comment: "") + " - DEV"
+        #else
+            self.title = NSLocalizedString("main_teachers", comment: "")
+        #endif
     }
 }
 
@@ -70,7 +85,7 @@ extension MainViewController: UITabBarControllerDelegate {
         
         if selectedIndex == 0 {
             
-            self.title = NSLocalizedString("main_teachers", comment: "")
+            setNavigationTitleTeachers()
         } else if selectedIndex == 1 {
              
             self.title = NSLocalizedString("main_students", comment: "")

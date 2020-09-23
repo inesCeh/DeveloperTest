@@ -21,25 +21,25 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-Pm-RxM">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </activityIndicatorView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9NX-83-Tkg">
                     <rect key="frame" x="0.0" y="16" width="375" height="651"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-Pm-RxM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ydA-Pm-RxM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="46v-7o-jP6"/>
-                <constraint firstItem="ydA-Pm-RxM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4b5-6u-hZg"/>
-                <constraint firstItem="9NX-83-Tkg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="8N9-zE-xWn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9NX-83-Tkg" secondAttribute="trailing" id="EtR-6T-Gr9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ydA-Pm-RxM" secondAttribute="trailing" id="Ewg-Pe-gja"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ydA-Pm-RxM" secondAttribute="bottom" id="p3v-3U-Nst"/>
-                <constraint firstItem="9NX-83-Tkg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rom-ps-yu9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9NX-83-Tkg" secondAttribute="bottom" id="vIH-3d-Y7b"/>
+                <constraint firstItem="ydA-Pm-RxM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BEj-2N-OnA"/>
+                <constraint firstItem="9NX-83-Tkg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Fvq-hI-vTJ"/>
+                <constraint firstItem="9NX-83-Tkg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SA4-0x-HKc"/>
+                <constraint firstItem="9NX-83-Tkg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zvt-8r-ymB"/>
+                <constraint firstItem="ydA-Pm-RxM" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="eT2-F0-dVa"/>
+                <constraint firstItem="ydA-Pm-RxM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fnj-dQ-dSI"/>
+                <constraint firstItem="ydA-Pm-RxM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oKq-tN-cDf"/>
+                <constraint firstItem="9NX-83-Tkg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tml-3E-UAA"/>
             </constraints>
             <point key="canvasLocation" x="139" y="128"/>
         </view>
